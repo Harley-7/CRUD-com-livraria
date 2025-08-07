@@ -2,36 +2,64 @@
 
 
 @section('content')
-    <nav id="navbar">
-        <div id="navbar-inner">
+    
+    @include('partials.header')
 
-            <div id="logo">
-                <img src="{{ asset('imagens/livro-logo.png') }}" alt="" id = "logo-img">
-                <h1>Livraria</h1>
-            </div>
+    <div id="search-container">
 
-            <div id="user-container">
+        <form action="{{ route('home') }}" method="get">
 
-                <div id ="user-action">
+        
+            <input type="text" name="search" placeholder="Busque pelo título do livro">
 
-                    <i class="bi bi-person-circle"></i>
-                    <p>Harley</p>
-                    
-                    <div id="arrow">
-                        <i class="bi bi-caret-down-fill"></i>
-                    </div>
 
-                </div>
+            <button type="submit"><i class="bi bi-search"></i></button>
 
-                <div id="menu-user" class="hide">
-                    <p>Editar dados</p>
-                    <p>Mudar a senha</p>
-                    <p class="danger">Deletar a conta</p>
-                    <p class="danger">Sair</p>
-                </div>
+        </form>
 
-            </div>
+    </div>
 
+    <div id="books-container">
+
+       <!-- 
+        <div class="book">
+ 
+            <h1>Titulo do Livro</h1>
+ 
+            <p class="autor">Escrito por: nome do autor</p>
+ 
+            <p class="genero">Gênero: gênero do livro</p>
+ 
+            <a class="compra-btn">XX Comprar</a>
+ 
         </div>
-    </nav>
+       -->
+
+        @forelse($books as $book)
+
+            <div class="book">
+
+                <h1>{{$book->titulo}}</h1>
+
+                <p class="autor">Escrito por: {{$book->autor}}</p>
+
+                <p class="genero">Gênero: {{$book->genero}}</p>
+
+                <a class="compra-btn" href="https://www.amazon.com.br/s?k={{$book->titulo}}" target="_blank">{{$book->preco}} Comprar</a>
+
+            </div>
+
+            @empty
+                <div id="no-book">
+                    <h1>Nenhum livro encontrado</h1>
+                </div>
+            @endforelse
+        </div>
+
+
+
+    <div id="pagination">
+        {{$books->appends(['search' => request()->query('search') ])->links()}}
+    </div>
+
 @endsection

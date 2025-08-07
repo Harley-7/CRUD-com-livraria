@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{$title}}</title>
+    <!--Favicon-->
+    <link rel="icon" href="{{ asset('imagens/favicon.ico') }}?v={{ time() }}">
     <!--CSS-->
     @vite('resources/css/styles.css')
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">

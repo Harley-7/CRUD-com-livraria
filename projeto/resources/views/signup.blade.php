@@ -24,26 +24,26 @@
 
             <div class="form-control">
                 <label for="name">Nome</label>
-                <input type="text" name="name" id="name" placeholder="Digite seu nome" value="Harley">
+                <input type="text" name="name" id="name" placeholder="Digite seu nome" value="{{ old('name') }}">
                 <span class="error">{{ $errors->first('name') }}</span>
             </div>
     
             
             <div class="form-control">
                 <label for="lastname">Sobrenome</label>
-                <input type="text" name="lastname" id="lastname" placeholder="Digite seu sobrenome" value="de Oliveira">
+                <input type="text" name="lastname" id="lastname" placeholder="Digite seu sobrenome" value="{{ old('lastname') }}">
                 <span class="error">{{ $errors->first('lastname') }}</span>
             </div>
     
             <div class="form-control">
                 <label for="email">E-mail</label>
-                <input type="email" name="email" id="email" placeholder="Digite seu e-mail" value="harleyoliveira@gmail.com">
+                <input type="email" name="email" id="email" placeholder="Digite seu e-mail" value="{{ old('email') }}">
                 <span class="error">{{ $errors->first('email') }}</span>
             </div>
     
             <div class="form-control">
                 <label for="password">Senha</label>
-                <input type="password" name="password" id="password" placeholder="Digite a sua senha" value="12345678">
+                <input type="password" name="password" id="password" placeholder="Digite a sua senha" >
                 <span class="error">{{ $errors->first('password') }}</span>
             </div>
     

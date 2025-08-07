@@ -18,18 +18,25 @@
 
             <h1>Login</h1>
 
-            <form action="" method="post">
+            <form action="{{ route('login.store') }}" method="post">
+
+                @csrf()
 
                 <div class="form-control">
                     <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email" placeholder="Digite seu e-mail" value="harleyoliveira@gmail.com">
+                    <input type="email" name="email" id="email" placeholder="Digite seu e-mail" value="{{ old('email') }}">
+                    <p class="error">{{ $errors->first('email') }}</p>
                 </div>
 
                 <div class="form-control">
                     <label for="password">Senha</label>
-                    <input type="password" name="password" id="password" placeholder="Digite sua senha" value = "12345678">
+                    <input type="password" name="password" id="password" placeholder="Digite sua senha">
+                    <p class="error">{{ $errors->first('password') }}</p>
                 </div>
 
+                <div id="remember">
+                    <input type="checkbox" checked  name="remember">Lembrar
+                </div>
 
                 <div class="action">
                     <button type="submit">Login</button>
@@ -43,5 +50,6 @@
 
         </div>
 
-    </div>
+</div>
+
 @endsection
