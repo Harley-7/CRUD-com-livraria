@@ -20,7 +20,7 @@ cd CRUD-com-livraria/projeto
 
 📦 3. Instalar Dependências
 
-Para instalar todas as dependências do projeto, você pode utilizar o comando abaixo:
+Para instalar todas as dependências do projeto, você pode utilizar os comandos abaixo:
 
 
 composer install
@@ -46,7 +46,7 @@ crie um banco de dados chamado bookstore
 em seguida utilize o comando abaixo:
 
 
-php artisan migrate:fresh --seed
+php artisan migrate --seed
 
 
 🚀 6. Iniciar o Servidor de Desenvolvimento
@@ -55,6 +55,7 @@ Para iniciar o servidor de desenvolvimento, utilize os comandos abaixo:
 
 
 php artisan serve
+
 npm run dev
 
 
