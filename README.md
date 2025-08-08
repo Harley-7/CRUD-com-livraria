@@ -24,6 +24,7 @@ Para instalar todas as dependências do projeto, você pode utilizar o comando a
 
 
 composer install
+
 npm install
 
 
