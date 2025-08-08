@@ -59,7 +59,3 @@ npm run dev
 
 O projeto estará disponível no navegador no endereço http://127.0.0.1:8000
 
-
-### 🔀 4. Criar uma Pull Request (PR)
-
-No GitHub, crie uma Pull Request (PR) para o branch dev. Certifique-se de que a PR esteja clara, com uma descrição detalhada do que foi implementado ou corrigido.
