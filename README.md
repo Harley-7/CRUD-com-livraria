@@ -7,7 +7,7 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento e instalar o
 Para clonar o repositório, utilize o seguinte comando:
 
 
-git clone https://github.com/Harley-7/CRUD-com-livraria.git
+```git clone https://github.com/Harley-7/CRUD-com-livraria.git
 
 
 📂 2. Navegar até o Diretório do Projeto
