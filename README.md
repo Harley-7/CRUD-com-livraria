@@ -7,7 +7,7 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento e instalar o
 Para clonar o repositório, utilize o seguinte comando:
 
 
-```git clone https://github.com/Harley-7/CRUD-com-livraria.git
+```git clone https://github.com/Harley-7/CRUD-com-livraria.git```
 
 
 📂 2. Navegar até o Diretório do Projeto
@@ -15,7 +15,7 @@ Para clonar o repositório, utilize o seguinte comando:
 Depois de clonar, entre no diretório do projeto com:
 
 
-cd CRUD-com-livraria/projeto
+```cd CRUD-com-livraria/projeto```
 
 
 📦 3. Instalar Dependências
@@ -23,12 +23,12 @@ cd CRUD-com-livraria/projeto
 Para instalar todas as dependências do projeto, você pode utilizar os comandos abaixo:
 
 
-composer install
+```composer install```
 
-npm install
+```npm install```
 
 
-OBS: se ocorrer um erro em PackageManifest.php line 179, apague e crie a pasta cache que está em CRUD-com-livraria\projeto\bootstrap\
+OBS: se ocorrer um erro em PackageManifest.php line 179, apague e crie novamente a pasta cache que está em CRUD-com-livraria\projeto\bootstrap\
 
 
 ⚙️ 4. Configurar Variáveis de Ambiente
@@ -36,7 +36,7 @@ OBS: se ocorrer um erro em PackageManifest.php line 179, apague e crie a pasta c
 Crie um arquivo .env na raiz do projeto, utilizando o arquivo de exemplo como base. Para isso, copie o arquivo .env.example com o seguinte comando:
 
 
-cp .env.example .env
+```cp .env.example .env```
 
 
 🛢 5. Criar o Banco de dados
@@ -46,7 +46,7 @@ crie um banco de dados chamado bookstore
 em seguida utilize o comando abaixo:
 
 
-php artisan migrate --seed
+```php artisan migrate --seed``` 
 
 
 🚀 6. Iniciar o Servidor de Desenvolvimento
@@ -54,9 +54,9 @@ php artisan migrate --seed
 Para iniciar o servidor de desenvolvimento, utilize os comandos abaixo:
 
 
-php artisan serve
+```php artisan serve```
 
-npm run dev
+```npm run dev```
 
 
 O projeto estará disponível no navegador no endereço http://127.0.0.1:8000
